@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Primary Meta Tags -->
+  <!-- TODO: Replace with your paper title and author names -->
+  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
+  <!-- TODO: Write a compelling 150-160 character description of your research -->
+  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Add 5-10 relevant keywords for your research area -->
+  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
+  <!-- TODO: List all authors -->
+  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <!-- TODO: Replace with your institution or lab name -->
+  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
+  <!-- TODO: Same as paper title above -->
+  <meta property="og:title" content="PAPER_TITLE">
+  <!-- TODO: Same as description above -->
+  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Replace with your actual website URL -->
+  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
+  <!-- TODO: Create a 1200x630px preview image and update path -->
+  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
+  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="KEYWORD1">
+  <meta property="article:tag" content="KEYWORD2">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- TODO: Replace with your lab/institution Twitter handle -->
+  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
+  <!-- TODO: Replace with first author's Twitter handle -->
+  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
+  <!-- TODO: Same as paper title above -->
+  <meta name="twitter:title" content="PAPER_TITLE">
+  <!-- TODO: Same as description above -->
+  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Same as social preview image above -->
+  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="PAPER_TITLE">
+  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
+  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
+  <meta name="citation_publication_date" content="2024">
+  <meta name="citation_conference_title" content="CONFERENCE_NAME">
+  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
+  
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://documentcloud.adobe.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+
+  <!-- TODO: Replace with your paper title and authors -->
+  <title>UniTS: Unified Time Series Generative Model for Earth Observation</title>
+  
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+  
+  <!-- Structured Data for Academic Papers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "PAPER_TITLE",
+    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "FIRST_AUTHOR_NAME",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "INSTITUTION_NAME"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "SECOND_AUTHOR_NAME",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "INSTITUTION_NAME"
+        }
+      }
+    ],
+    "datePublished": "2024-01-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CONFERENCE_OR_JOURNAL_NAME"
+    },
+    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
+    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
+    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
+    "abstract": "FULL_ABSTRACT_TEXT_HERE",
+    "citation": "BIBTEX_CITATION_HERE",
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "mainEntity": {
+      "@type": "WebPage",
+      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "RESEARCH_AREA_1"
+      },
+      {
+        "@type": "Thing", 
+        "name": "RESEARCH_AREA_2"
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Website/Organization Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "INSTITUTION_OR_LAB_NAME",
+    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
+    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
+    "sameAs": [
+      "https://twitter.com/YOUR_TWITTER_HANDLE",
+      "https://github.com/YOUR_GITHUB_USERNAME"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- More Works Dropdown -->
+  <div class="more-works-container">
+    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
+      <i class="fas fa-flask"></i>
+      More Works
+      <i class="fas fa-chevron-down dropdown-arrow"></i>
+    </button>
+    <div class="more-works-dropdown" id="moreWorksDropdown">
+      <div class="dropdown-header">
+        <h4>More Works from Our Lab</h4>
+        <button class="close-btn" onclick="toggleMoreWorks()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="works-list">
+        <!-- TODO: Replace with your lab's related works -->
+        <a href="https://github.com/YuxiangZhang-BIT/SpectralX" class="work-item" target="_blank">
+          <div class="work-info">
+            <!-- TODO: Replace with actual paper title -->
+            <h5>SpectralX: Parameter-efficient Domain Generalization for Spectral Remote Sensing Foundation Models</h5>
+            <!-- TODO: Replace with brief description -->
+            <!-- <p>Brief description of the work and its main contribution.</p> -->
+            <!-- TODO: Replace with venue and year -->
+            <span class="work-venue">ARXIV</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        <!-- TODO: Add more related works or remove extra items -->
+        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
+          <div class="work-info">
+            <h5>Paper Title 2</h5>
+            <p>Brief description of the work and its main contribution.</p>
+            <span class="work-venue">Conference/Journal 2023</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
+          <div class="work-info">
+            <h5>Paper Title 3</h5>
+            <p>Brief description of the work and its main contribution.</p>
+            <span class="work-venue">Conference/Journal 2023</span>
+          </div>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- TODO: Replace with your paper title -->
+            <h1 class="title is-1 publication-title">UniTS: Unified Time Series Generative Model for Earth Observation</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- TODO: Replace with your paper authors and their personal links -->
+              <span class="author-block">
+                <a href="https://github.com/YuxiangZhang-BIT" target="_blank">Yuxiang Zhang</a><sup>1</sup>,</span>
+                <span class="author-block">
+                  <a href="https://ieeexplore.ieee.org/author/37272837800" target="_blank">Shunlin Liang</a><sup>1</sup></a><sup>*</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://github.com/flyakon" target="_blank">Wenyuan Li</a><sup>1</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://github.com/xuwayyy" target="_blank">Jiangwei Xie</a><sup>2</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?user=aM1sg40AAAAJ&hl=zh-CN" target="_blank">Wei Li</a><sup>2</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?user=utCt318AAAAJ&hl=zh-CN" target="_blank">Mengmeng Zhang</a><sup>2</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://github.com/xuwayyy" target="_blank">Ran Tao</a><sup>2</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://www.ece.udel.edu/people/faculty/xianggen/" target="_blank">Xiang-Gen Xia</a><sup>3</sup></span>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <!-- TODO: Replace with your institution and conference/journal info -->
+                    <span class="author-block"></a><sup>1</sup>University of Hong Kong, </a><sup>2</sup>Beijing Institute of Technology, </a><sup>3</sup>University of Delaware, 
+                    <br><sup>*</sup>Corresponding Author
+                    <!-- <br>Conference name and year</span> -->
+                    <!-- TODO: Remove this line if no equal contribution -->
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- TODO: Update with your arXiv paper ID -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- TODO: Add your supplementary material PDF or remove this section -->
+                    <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span>
+
+                  <!-- TODO: Replace with your GitHub repository URL -->
+                  <span class="link-block">
+                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- TODO: Update with your arXiv paper ID -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- TODO: Replace with your video description -->
+      <h2 class="subtitle has-text-justified">
+         We propose a <strong>Uni</strong>fied <strong>T</strong>ime <strong>S</strong>eries
+        Generative Model (<strong>UniTS</strong>) based on the flow matching
+        generative paradigm, a general framework applicable to various time series
+        tasks, including time series reconstruction, time series cloud removal,
+        time series semantic change detection, and time series forecasting.
+      </h2>
+      <!-- TODO: Replace with your teaser video -->
+      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+        <!-- TODO: Add your video file path here -->
+        <source src="static/videos/UniTS-4k.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <!-- TODO: Replace with your paper abstract -->
+          <p>
+            One of the primary objectives of Earth observation is to capture the complex dynamics of the Earth system using satellite image time series. This process encompasses tasks such as reconstructing continuous cloud-free image sequences, identifying changes in land cover types, and forecasting future surface evolution. However, existing methods typically require specialized models tailored to different tasks, lacking unified modeling of spatiotemporal features across multiple time series tasks. In this paper, we propose <strong>UniTS</strong>, a general framework applicable to various time series tasks. Based on the flow matching generative paradigm, UniTS constructs a deterministic evolution path from noise to targets under the guidance of task-specific conditions, achieving unified modeling of spatiotemporal representations for multiple tasks. The architecture of UniTS consists of a diffusion transformer with spatio-temporal blocks, where we design an Adaptive Condition Injector (ACor) to enhance the model's conditional perception of multimodal inputs, enabling high-quality controllable generation. Additionally, we design a Spatiotemporal-aware Modulator (STM) to improve the ability of spatio-temporal blocks to capture complex spatiotemporal dependencies. Furthermore, we construct two high-quality multimodal time series datasets, TS-S12 and TS-S12CR, filling the gap of benchmark datasets for time series cloud removal and forecasting tasks. Extensive experiments demonstrate that UniTS exhibits exceptional generative and comprehension capabilities in both low-level and high-level time series tasks. It significantly outperforms existing methods, particularly when facing challenges such as severe cloud contamination, modality absence, and forecasting complex phenological variations.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Motivation</h2>
+        <div class="content has-text-justified">
+          <p>
+            Based on the objectives and processing levels of time series analysis tasks, we categorize them into two broad classes: low-level (time series reconstruction & time series cloud removal) and high-level (time series semantic change detection & time series forecasting) vision tasks. The limitations of existing low-level and high-level time series tasks are as follows:
+          </p>
+          <ol>
+            <li>Limited exploration in time series cloud removal tasks and challenges in dataset construction. Most existing studies focus on time-series reconstruction tasks based on simulated cloud masks, while there is <strong>limited research on time-series cloud removal</strong> under real and complex cloud-contaminated scenarios. Currently, <strong>the lack of high-quality benchmark datasets</strong> for time-series cloud removal severely restricts the performance evaluation of models in this field.</li>
+            <li>Limited exploration in time series forecasting tasks. Current research on time series forecasting mainly relies on discriminative models (e.g., Pangu-Weather). In contrast, generative models have significant advantages in fitting the complex dynamic distribution of geographical spatiotemporality, yet they have not been fully explored. Furthermore, <strong>research on time series forecasting of raw reflectance remains largely unexplored</strong>, particularly for multi-spectral imagery with high spatiotemporal resolution (e.g., Sentinel-2). </li>
+            <li>The absence of a unified framework capable of handling multiple remote sensing time-series tasks. Current research remains largely in the stage of developing specialized models for specific tasks, <strong>lacking a unified framework</strong> that can effectively address various remote sensing time series tasks.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <!-- 将 is-max-desktop 改为更宽的容器或直接移除限制 -->
+  <div class="container is-max-widescreen"> <!-- 或者使用 is-fluid 获得全宽 -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full"> <!-- 改为 full 占据全部宽度 -->
+        <h2 class="title is-3">Dataset</h2>
+        <div class="content has-text-justified">
+          <p>
+            We have constructed two high-quality multimodal time-series datasets, namely TS-S12 and TS-S12CR. Among them, TS-S12 and TS-S12CR contain Sentinel-1 and Sentinel-2 imagery from 14,973 and 12,126 ROIs around the world, respectively. 
+          </p>
+          <ol>
+            <li>TS-S12 provides aligned sample pairs of Sentinel-1 and cloud-free Sentinel-2 for time series reconstruction and forecasting tasks.</li>
+            <li>TS-S12CR offers aligned triplets samples of Sentinel-1, cloud-covered Sentinel-2, and cloud-free Sentinel-2 specifically designed for time series cloud removal task. TS-S12CR provides an extreme scenario with an average cloud coverage of 84.02%, serving as an important benchmark for developing robust time series cloud removal methods.</li>
+          </ol>
+          <figure class="image" style="max-width: 1200px; margin: 2rem auto;">
+            <img src="static/images/dataset-tab.jpg" style="width: 100%; height: auto; object-fit: contain;">
+          </figure>
+          <figure class="image" style="max-width: 1200px; margin: 2rem auto;">
+            <img src="static/images/dataset.png" style="width: 100%; height: auto; object-fit: contain;">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <!-- 将 is-max-desktop 改为更宽的容器或直接移除限制 -->
+  <div class="container is-max-widescreen"> <!-- 或者使用 is-fluid 获得全宽 -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full"> <!-- 改为 full 占据全部宽度 -->
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <p>
+            UniTS is implemented based on the standard Diffusion Transformer (DiT). Within the DiT framework, we introduce a spatio-temporal block and design two novel components: the Adaptive Condition Injector (ACor) and the Spatiotemporal-aware Modulator (STM). ACor adaptively injects multimodal conditional information (e.g., SAR and optical imagery) by dynamically generating affine transformation parameters, significantly enhancing the model's conditional perception of multimodal inputs across various time series tasks. Meanwhile, STM modulates attention weights in the spatio-temporal block by leveraging generated dynamic bias terms based on spatiotemporal priors, thereby strengthening the model's capacity to capture complex spatiotemporal dependencies.
+          </p>
+          <figure class="image" style="max-width: 1200px; margin: 2rem auto;">
+            <img src="static/images/UniTS.png" style="width: 100%; height: auto; object-fit: contain;">
+            <figcaption class="has-text-centered has-text-weight-semibold is-italic mt-3">
+              The framework of UniTS. Taking the time series cloud removal task as an example.<br>
+              (a) UniTS architecture, (b) Adaptive Condition Injector (ACor), (c) Spatiotemporal-aware Modulator (STM).
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <!-- 将 is-max-desktop 改为更宽的容器或直接移除限制 -->
+  <div class="container is-max-widescreen"> <!-- 或者使用 is-fluid 获得全宽 -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full"> <!-- 改为 full 占据全部宽度 -->
+        <h2 class="title is-3">Results</h2>
+        <h2 class="subtitle has-text-left has-text-weight-semibold">Time Series Reconstruction</h2>
+        <div class="content has-text-justified">
+          <p>
+            TableIV provides a quantitative comparison of time series reconstruction performance on the TS-S12 dataset.
+          </p>
+          <figure class="image" style="max-width: 1200px; margin: 2rem auto;">
+            <img src="static/images/task1-tab.jpg" style="width: 100%; height: auto; object-fit: contain;">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="subtitle has-text-left has-text-weight-semibold"> Visualization of Time Series Reconstruction</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/cldmsk1.png" alt="First research result visualization" loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+          Qualitative comparison of time series reconstruction on TS-S12 Dataset, presenting the RGB band of Sentinel-2 here. The SSIM value of each
+frames in the time series is marked. (Estado do Mato Grosso, Brasil, (16°05'21.1''S, 60°09'01.4''W))
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/cldmsk2.png" alt="Second research result visualization" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+          Qualitative comparison of time series reconstruction on TS-S12 Dataset, presenting the RGB band of Sentinel-2 here. The SSIM value of each
+frames in the time series is marked. (Tandil, Argentina, (37°18'08''S, 59°06'52''W))
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/cldmsk-sub3.png" alt="Third research result visualization" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+       </h2>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/cldmsk-sub2.png" alt="Fourth research result visualization" loading="lazy"/>
+      <h2 class="subtitle has-text-centered">
+      </h2>
+    </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/cldmsk-sub1.png" alt="Fourth research result visualization" loading="lazy"/>
+      <h2 class="subtitle has-text-centered">
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+<section class="section hero is-light">
+  <!-- 将 is-max-desktop 改为更宽的容器或直接移除限制 -->
+  <div class="container is-max-widescreen"> <!-- 或者使用 is-fluid 获得全宽 -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full"> <!-- 改为 full 占据全部宽度 -->
+        <h2 class="subtitle has-text-left has-text-weight-semibold">Time Series Cloud Removal</h2>
+        <div class="content has-text-justified">
+          <p>
+            TableV provides a quantitative comparison of time series cloud removal performance on the TS-S12CR dataset.
+          </p>
+          <figure class="image" style="max-width: 1200px; margin: 2rem auto;">
+            <img src="static/images/task2-tab.jpg" style="width: 100%; height: auto; object-fit: contain;">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="subtitle has-text-left has-text-weight-semibold"> Visualization of Time Series Cloud Removal</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/rmcld1.png" alt="First research result visualization" loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+          Qualitative comparison of time series reconstruction on TS-S12 Dataset, presenting the RGB band of Sentinel-2 here. The SSIM value of each
+frames in the time series is marked. (Estado do Mato Grosso, Brasil, (16°05'21.1''S, 60°09'01.4''W))
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/rmcld-sub1.png" alt="Third research result visualization" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+       </h2>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/rmcld-sub2.png" alt="Fourth research result visualization" loading="lazy"/>
+      <h2 class="subtitle has-text-centered">
+      </h2>
+    </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/rmcld-sub3.png" alt="Fourth research result visualization" loading="lazy"/>
+      <h2 class="subtitle has-text-centered">
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="subtitle has-text-left has-text-weight-semibold">  Visualization of time series cloud removal under S1 modality missing</h2>
+        <div class="content has-text-justified">
+          <p>
+            To evaluate the robustness of the proposed method to modality absence, we compare the cloud removal performance under different training and inference configurations in Table VI.
+          </p>
+          <figure class="image" style="max-width: 500px; margin: 2rem auto;">
+            <img src="static/images/miss-tab.jpg" style="width: 100%; height: auto; object-fit: contain;">
+          </figure>
+        </div>
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/rmcld_2.png" alt="First research result visualization" loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+          Qualitative comparison of time series reconstruction on TS-S12 Dataset, presenting the RGB band of Sentinel-2 here. The SSIM value of each
+frames in the time series is marked. (Estado do Mato Grosso, Brasil, (16°05'21.1''S, 60°09'01.4''W))
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/rmcld-miss1.png" alt="Second research result visualization" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+          Qualitative comparison of time series reconstruction on TS-S12 Dataset, presenting the RGB band of Sentinel-2 here. The SSIM value of each
+frames in the time series is marked. (Tandil, Argentina, (37°18'08''S, 59°06'52''W))
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/rmcld-miss2.png" alt="Third research result visualization" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+       </h2>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/rmcld-miss3.png" alt="Fourth research result visualization" loading="lazy"/>
+      <h2 class="subtitle has-text-centered">
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+
+
+<section class="section hero is-light">
+  <!-- 将 is-max-desktop 改为更宽的容器或直接移除限制 -->
+  <div class="container is-max-widescreen"> <!-- 或者使用 is-fluid 获得全宽 -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full"> <!-- 改为 full 占据全部宽度 -->
+        <h2 class="subtitle has-text-left has-text-weight-semibold">Time Series Semantic Change Detection</h2>
+        <div class="content has-text-justified">
+          <p>
+            TableVII provides a quantitative comparison of time series semantic change detection performance on the DynamicEarthNet dataset.
+          </p>
+          <figure class="image" style="max-width: 1200px; margin: 2rem auto;">
+            <img src="static/images/task3.1-tab.jpg" style="width: 100%; height: auto; object-fit: contain;">
+          </figure>
+          <p>
+            TableVIII provides a quantitative comparison of time series semantic change detection performance on the MUDS dataset.
+          </p>
+          <figure class="image" style="max-width: 550px; margin: 2rem auto;">
+            <img src="static/images/task3.2-tab.jpg" style="width: 100%; height: auto; object-fit: contain;">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="subtitle has-text-left has-text-weight-semibold"> Visualization of Time Series Semantic Change Detection</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/Dync1-SCD.png" alt="First research result visualization" loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+           Qualitative comparison of time series semantic change detection on DynamicEarthNet Dataset, presenting the RGB band of Planet here. Left: Semantic segmentation maps from T1 to T11, the mIoU value of each frames in the time series is marked; right: Binary Change Detection map (BCD) and Semantic Change Detection map (SCD).
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/Dync2-SCD.png" alt="Third research result visualization" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+       </h2>
+     </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/MUDS1.png" alt="Third research result visualization" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+       </h2>
+     </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/MUDS2.png" alt="Third research result visualization" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+       </h2>
+     </div>
+  </div>
+</div>
+</div>
+</section>
+
+
+<section class="section hero is-light">
+  <!-- 将 is-max-desktop 改为更宽的容器或直接移除限制 -->
+  <div class="container is-max-widescreen"> <!-- 或者使用 is-fluid 获得全宽 -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full"> <!-- 改为 full 占据全部宽度 -->
+        <h2 class="subtitle has-text-left has-text-weight-semibold">Time Series Forecasting</h2>
+        <div class="content has-text-justified">
+          <p>
+            TableVII provides a quantitative comparison of time series forecasting performance on the TS-S12 dataset.
+          </p>
+          <figure class="image" style="max-width: 550px; margin: 2rem auto;">
+            <img src="static/images/task4.1-tab.jpg" style="width: 100%; height: auto; object-fit: contain;">
+          </figure>
+          <!-- <p>
+            TableVIII provides a quantitative comparison of time series forecasting performance on the GreenEarthNet dataset.
+          </p>
+          <figure class="image" style="max-width: 550px; margin: 2rem auto;">
+            <img src="static/images/task3.2-tab.jpg" style="width: 100%; height: auto; object-fit: contain;">
+          </figure> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="subtitle has-text-left has-text-weight-semibold"> Visualization of Time Series Forecasting</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- TODO: Replace with your research result images -->
+        <img src="static/images/pred_1.png" alt="First research result visualization" loading="lazy"/>
+        <!-- TODO: Replace with description of this result -->
+        <h2 class="subtitle has-text-centered">
+           Qualitative comparison of time series forecasting on TS-S12 Dataset, presenting the RGB band of Sentinel-2 here. The SSIM value of each frames in the time series is marked. (Boston, USA, (42°18'37.8''S, 71°06'31.0''W))
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/pred_2.png" alt="Third research result visualization" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+           Qualitative comparison of time series forecasting on TS-S12 Dataset, presenting the RGB band of Sentinel-2 here. The SSIM value of each frames in the time series is marked. (Szentdenes, Hungary, (46°00'35.6''N, 17°55'12.0''E))
+
+       </h2>
+     </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/pred-sub1.png" alt="Third research result visualization" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+       </h2>
+     </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/pred-sub2.png" alt="Third research result visualization" loading="lazy"/>
+        <h2 class="subtitle has-text-centered">
+       </h2>
+     </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End video carousel -->
+
+
+
+
+
+
+<!-- Paper poster -->
+
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <!-- TODO: Replace with your poster PDF -->
+      <!-- <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> --> -->
+
+<!--End paper poster -->
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
+  title={Your Paper Title Here},
+  author={First Author and Second Author and Third Author},
+  journal={Conference/Journal Name},
+  year={2024},
+  url={https://your-domain.com/your-project-page}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
