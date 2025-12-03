@@ -249,7 +249,13 @@
                 <span class="author-block">
                   <a href="https://geog.hku.hk/sl-liang" target="_blank">Shunlin Liang</a><sup>1</sup></a><sup>*</sup>,</span>
                   <span class="author-block">
-                    <a href="https://github.com/flyakon" target="_blank">Wenyuan Li</a><sup>1</sup>,</span>
+                    <a href="https://scholar.google.com/citations?user=cHwscjMAAAAJ&hl=zh-CN" target="_blank">Wenyuan Li</a><sup>1</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?hl=zh-CN&user=NGWhSDgAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Han Ma</a><sup>1</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://www.researchgate.net/profile/Jianglei-Xu" target="_blank">Jianglei Xu</a><sup>1</sup>,</span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?user=rVlJU8YAAAAJ&hl=en" target="_blank">Yichuan Ma</a><sup>1</sup>,</span>
                   <span class="author-block">
                     <a href="https://github.com/xuwayyy" target="_blank">Jiangwei Xie</a><sup>2</sup>,</span>
                   <span class="author-block">
@@ -275,7 +281,7 @@
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
+                      <!-- <span class="link-block">
                         <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
@@ -283,8 +289,17 @@
                         </span>
                         <span>Paper</span>
                       </a>
-                    </span>
+                    </span> -->
 
+                <!-- TODO: Update with your arXiv paper ID -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                  
                     <!-- TODO: Add your supplementary material PDF or remove this section -->
                     <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
@@ -298,7 +313,7 @@
 
                   <!-- TODO: Replace with your GitHub repository URL -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/YuxiangZhang-BIT/UniTS" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -307,14 +322,18 @@
                   </a>
                 </span>
 
-                <!-- TODO: Update with your arXiv paper ID -->
+
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="https://huggingface.co/datasets/YuxiangZhang-BIT/UniTS-Datasets-ckpt" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
+                    <span class="icon">
+                      <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" 
+                          alt="HuggingFace" 
+                          style="width: 20px; height: 20px;">
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+                </span>
                 </a>
               </span>
             </div>
@@ -392,7 +411,7 @@
         <h2 class="title is-3">Dataset</h2>
         <div class="content has-text-justified">
           <p>
-            We have constructed two high-quality multimodal time-series datasets, namely TS-S12 and TS-S12CR. Among them, TS-S12 and TS-S12CR contain Sentinel-1 and Sentinel-2 imagery from 14,973 and 12,126 ROIs around the world, respectively. The total storage capacity of these two datasets is approximately <strong>3 TB</strong>.
+            We construct two high-quality multimodal time-series datasets, namely TS-S12 and TS-S12CR. Among them, TS-S12 and TS-S12CR contain Sentinel-1 with 2 channels (VV and VH) and Sentinel-2 imagery with 10 spectral bands (excluding B1 Aerosols, B9 Water Vapor, and B10 Cirrus) from 14,973 and 12,126 ROIs around the world, respectively. The total storage capacity of these two datasets is approximately <strong>2.2TB</strong>.
           </p>
           <ol>
             <li>TS-S12 provides aligned sample pairs of Sentinel-1 and cloud-free Sentinel-2 for time series reconstruction and forecasting tasks.</li>
@@ -675,7 +694,7 @@ frames in the time series is marked. (Tandil, Argentina, (37°18'08''S, 59°06'5
         <h2 class="subtitle has-text-left has-text-weight-semibold">Time Series Forecasting</h2>
         <div class="content has-text-justified">
           <p>
-            TableVII provides a quantitative comparison of time series forecasting performance on the TS-S12 dataset.
+            TableIX provides a quantitative comparison of time series forecasting performance on the TS-S12 dataset.
           </p>
           <figure class="image" style="max-width: 550px; margin: 2rem auto;">
             <img src="static/images/task4.1-tab.jpg" style="width: 100%; height: auto; object-fit: contain;">
